@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário</title>
+  <link rel="stylesheet" href=""/>
+  <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0fce51, #ff7253, #efd575);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form {
+  background: #fff;
+  border-radius: 18px;
+  padding: 60px;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #26344b;
+  pointer-events: all;
+  animation: iniciar 1.6s ease-out;
+}
+
+.title {
+  font-size: 1.8em;
+  margin-bottom: 10%;
+}
+
+.input {
+  position: relative;
+  width: 280px; /* ou conforme seu input */
+  margin-bottom: 12px;
+}
+
+.input img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.input input {
+  width: 100%;
+  padding: 10px 10px 10px 40px; /* espaço para o ícone */
+  border-radius: 22px;
+  border: 2px solid #6f7e11;
+  font-size: 1.2em;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  color: #26344b;
+  background: -webkit-linear-gradient(-45deg, #afffec, #ff7253, #fd5754);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left; /* para alinhar normalmente */
+}
+
+#btn {
+  width: 100%;
+}
+
+#btn button {
+  width: 100%;
+  height: 48px;
+  border: none;
+  font-size: 1.2em;
+  color: #fff;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(-45deg, #0fce51, #ff7253, #efd575);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#btn button:hover {
+  background: linear-gradient(-45deg, #0fce51, #cc5a3d, #cfa344);
+  transform: scale(1.05);
+}
+
+@keyframes iniciar {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+</style>
+<body>
+  <div id="form">
+    <form action="#" method="post">
+      <h2 class="title">Cadastrar</h2>
+
+      <label for="username">Nome</label>
+      <div class="input">
+        <img src="user.png" alt="User Icon" />
+        <input id="username" name="username" placeholder="Username" type="text" required />
+      </div>
+
+      <label for="email">Email</label>
+      <div class="input">
+        <img src="gmail.png">
+        <input id="email" name="email" placeholder="Email" type="email" required />
+      </div>
+
+      <label for="senha">Senha</label>
+      <div class="input">
+        <img src="senha.png" alt="Password Icon" />
+        <input id="senha" name="senha" placeholder="Password" type="password" required />
+       
+
+
+
+      </div>
+
+      <div id="btn">
+        <button type="submit">Cadastrar</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
